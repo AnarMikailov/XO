@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow: hidden;
+  text-align: center;
+  width: 90rem;
+  height: 45rem;
+  margin: 10rem auto;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(0, 153, 255),
+    rgb(255, 136, 0)
+  );
+  font-family: sans-serif;
+}
+
+.game-area {
+  height: 45rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  justify-content: center;
+}
+.grid-item {
+  width: 35rem;
+  height: 15rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  text-align: center;
+}
+.X {
+  display: inline-block;
+  font-size: 12rem;
+  margin-top: -1rem;
+}
+.O {
+  display: inline-block;
+  font-size: 12rem;
+  margin-top: -1rem;
+}
+.win__message {
+  display: flex;
+  position: relative;
+  top: -25rem;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 80rem;
+  height: 20rem;
+  background-color: rgb(8, 66, 105);
+  z-index: 1000;
+  text-align: center;
+  padding-top: 10%;
+}
+.winnig__text {
+  display: block;
+  font-size: 9rem;
+  color: rgb(255, 136, 0);
+  align-self: center;
+  justify-self: center;
+  margin: -35px;
+}
+
+.newGame__btn {
+  position: relative;
+  box-shadow: 0 2rem 1.2rem rgba(0, 0, 0, 0.804);
+  width: 20rem;
+  height: 5rem;
+  border: none;
+  cursor: pointer;
+  margin: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  margin-top: 5rem;
+}
+.newGame__btn:active {
+  transform: translateY(-3px);
+}
+.newGame {
+  font-size: 2.7rem;
+  color: rgb(255, 136, 0);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+.hidden {
+  display: none;
+  transition: all 5s;
+}
